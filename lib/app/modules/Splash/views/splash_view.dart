@@ -7,7 +7,6 @@ import '../controllers/splash_controller.dart';
 class SplashView extends GetView<SplashController> {
   @override
   Widget build(BuildContext context) {
-    controller.onInit();
     return Scaffold(
       body: Center(
         child: Text(

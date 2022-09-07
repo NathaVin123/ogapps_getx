@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+import 'package:ogapps_getx/app/modules/Chat/bindings/chat_binding.dart';
+import 'package:ogapps_getx/app/modules/Chat/views/chat_view.dart';
 import 'package:ogapps_getx/app/modules/Dashboard/bindings/dashboard_binding.dart';
 import 'package:ogapps_getx/app/modules/Dashboard/views/dashboard_view.dart';
 import 'package:ogapps_getx/app/modules/Login/bindings/login_binding.dart';
@@ -36,6 +38,11 @@ class AppPages {
       name: _Paths.REGISTER,
       page: () => RegisterView(),
       binding: RegisterBinding(),
+    ),
+    GetPage(
+      name: _Paths.CHAT,
+      page: () => ChatView(),
+      binding: ChatBinding(),
     ),
   ];
 }

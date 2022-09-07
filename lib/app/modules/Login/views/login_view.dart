@@ -61,8 +61,16 @@ class LoginView extends GetView<LoginController> {
                     height: 8,
                   ),
                   MaterialButton(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(24)),
                     onPressed: () {
                       Get.offAllNamed(Routes.DASHBOARD);
+                      Get.snackbar('Welcome User', 'Login Success',
+                          snackPosition: SnackPosition.TOP,
+                          snackStyle: SnackStyle.FLOATING,
+                          backgroundColor: Colors.green,
+                          borderRadius: 24,
+                          colorText: Colors.white);
                     },
                     color: Colors.blue,
                     child: Row(
@@ -72,7 +80,10 @@ class LoginView extends GetView<LoginController> {
                           padding: const EdgeInsets.symmetric(vertical: 10),
                           child: Text(
                             'Login',
-                            style: TextStyle(color: Colors.white, fontSize: 18),
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold),
                           ),
                         ),
                       ],
@@ -85,7 +96,7 @@ class LoginView extends GetView<LoginController> {
                       child: Text(
                         'Register',
                         style: TextStyle(
-                            color: Colors.blue,
+                            color: Color.fromARGB(255, 100, 100, 100),
                             fontWeight: FontWeight.bold,
                             fontSize: 18),
                       ),
@@ -100,12 +111,38 @@ class LoginView extends GetView<LoginController> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      InkWell(
-                          onTap: () {},
-                          child: Icon(
-                            Icons.gamepad,
-                            color: Colors.blue,
-                          )),
+                      Column(
+                        children: [
+                          InkWell(
+                              onTap: () {
+                                Get.offAllNamed(Routes.DASHBOARD);
+                                Get.snackbar(
+                                    'Welcome User', 'Sign with Google Success',
+                                    snackPosition: SnackPosition.TOP,
+                                    snackStyle: SnackStyle.FLOATING,
+                                    backgroundColor: Colors.green,
+                                    borderRadius: 24,
+                                    colorText: Colors.white);
+                              },
+                              child: Column(
+                                children: [
+                                  Image.network(
+                                    'http://pngimg.com/uploads/google/google_PNG19635.png',
+                                    fit: BoxFit.cover,
+                                    width: 50,
+                                    height: 50,
+                                  ),
+                                  Text(
+                                    'Sign with Google',
+                                    style: TextStyle(
+                                        color:
+                                            Color.fromARGB(255, 100, 100, 100),
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ],
+                              )),
+                        ],
+                      ),
                     ],
                   )
                 ],

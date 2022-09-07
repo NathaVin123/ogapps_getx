@@ -1,18 +1,23 @@
 import 'package:get/get.dart';
+import 'package:ogapps_getx/app/modules/Dashboard/views/chat_view.dart';
+import 'package:ogapps_getx/app/modules/Dashboard/views/settings_view.dart';
 
 class DashboardController extends GetxController {
-  final count = 0.obs;
+  var indexScreen = 0.obs;
+  var indexMessage = 0.obs;
+
+  final screens = [
+    new ChatView(),
+    new SettingsView(),
+  ];
+
   @override
   void onInit() {
     super.onInit();
   }
 
-  @override
-  void onReady() {
-    super.onReady();
+  changeScreenIndex(int index) {
+    indexScreen.value = index;
+    update();
   }
-
-  @override
-  void onClose() {}
-  void increment() => count.value++;
 }
