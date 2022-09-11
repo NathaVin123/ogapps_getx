@@ -10,6 +10,9 @@ abstract class Routes {
   static const DASHBOARD = _Paths.DASHBOARD;
   static const REGISTER = _Paths.REGISTER;
   static const CHAT = _Paths.CHAT;
+  static const CONTACT_DETAIL = _Paths.CONTACT_DETAIL;
+  static const CALL = _Paths.CALL;
+  static const VIDEO_CALL = _Paths.VIDEO_CALL;
 }
 
 abstract class _Paths {
@@ -19,4 +22,7 @@ abstract class _Paths {
   static const DASHBOARD = '/dashboard';
   static const REGISTER = '/register';
   static const CHAT = '/chat';
+  static const CONTACT_DETAIL = '/contact-detail';
+  static const CALL = '/call';
+  static const VIDEO_CALL = '/video-call';
 }
