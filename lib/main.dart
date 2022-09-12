@@ -11,7 +11,6 @@ void main() {
       title: "OGAPPS",
       initialRoute: AppPages.INITIAL,
       getPages: AppPages.routes,
-      enableLog: true,
     ),
   );
 }
