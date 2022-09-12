@@ -1,8 +1,6 @@
 import 'package:get/get.dart';
 
 class VideoCallController extends GetxController {
-  //TODO: Implement VideoCallController
-
   final count = 0.obs;
   @override
   void onInit() {
